@@ -10,8 +10,8 @@ function vmax(percent: number) {
 function vmin(percent: number) {
     return Math.min(vh(percent), vw(percent))
 }
-const noop = (value) => value
-const UnitMap = {
+const noop = (value) => parseFloat(value)
+const UnitMap: Record<string, Function> = {
     vh,
     vw,
     vmax,
@@ -21,7 +21,7 @@ const UnitMap = {
 export function parseUnit(value: string, unit: string) {
     const func = UnitMap[unit]
     if (func) {
-        return func[parseFloat(value)]
+        return func(parseFloat(value))
     } else {
         throw new TypeError('unsupport css unit: ' + unit)
     }
