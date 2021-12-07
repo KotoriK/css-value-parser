@@ -1,5 +1,4 @@
-export declare function vh(percent: number): number;
-export declare function vw(percent: number): number;
-export declare function vmax(percent: number): number;
-export declare function vmin(percent: number): number;
+import { parsePureCSSValue } from './parse';
+export { parsePureCSSValue };
+export declare function parseCSSValue(cssValue: string): any;
 //# sourceMappingURL=index.d.ts.map

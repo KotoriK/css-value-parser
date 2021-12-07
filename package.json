@@ -1,12 +1,18 @@
 {
-  "name": "cssunit",
-  "version": "0.0.1",
+  "name": "css-value-parser",
+  "version": "0.0.2",
   "description": "Use cssunit in Javascript",
-  "main": "index.js",
+  "source": "src/index.ts",
+  "main": "dist/css-value.js",
+  "module": "dist/css-value.mjs",
+  "umd:main": "dist/css-value.umd.js",
   "scripts": {
-    "test": "jest --collect-coverage",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "microbundle"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KotoriK/cssunit.js.git"
