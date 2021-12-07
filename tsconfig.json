@@ -1,8 +1,8 @@
 {
     // tsconfig 所在的根目录, 则是一个project
     "compilerOptions": {
-        "module": "commonjs", // 模块系统
-        "target": "es2019", // 生成目标, 一般选择ES6，因为不是客户端环境，没必要还编译成  ES5
+        "module": "esnext", // 模块系统
+        "target": "esnext", // 生成目标, 一般选择ES6，因为不是客户端环境，没必要还编译成  ES5
         "noImplicitAny": false,
         "strictNullChecks": false,
         "strict": true,
@@ -12,7 +12,6 @@
         "noImplicitThis": true,
         "pretty": true,
         "jsx": "react",
-        "resolveJsonModule": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "noUnusedLocals": false,
@@ -39,7 +38,7 @@
     },
     // file include会算出一个交集, 指明哪些是项目的 ts 文件
     "include": [
-        "./**/*"
+        "./src/*"
     ],
     // 排除项目下面不符合要求的文件，这个按需设定即可，可以放心排除乱七八糟的文件
     "exclude": [
