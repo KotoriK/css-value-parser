@@ -1,8 +1,8 @@
 function vh(percent: number) {
-    return window.innerHeight * percent
+    return window.innerHeight * percent / 100
 }
 function vw(percent: number) {
-    return window.innerWidth * percent
+    return window.innerWidth * percent / 100
 }
 function vmax(percent: number) {
     return Math.max(vh(percent), vw(percent))
